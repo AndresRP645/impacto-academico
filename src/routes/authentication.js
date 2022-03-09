@@ -10,7 +10,7 @@ router.get('/login', isNotLoggedIn, (req, res) => {
 
 router.post('/login', isNotLoggedIn, (req, res, next) => {
     passport.authenticate('login', {
-        successRedirect: '/answers',
+        successRedirect: '/materias',
         failureRedirect: '/login',
         failureFlash: true
     })(req, res, next);

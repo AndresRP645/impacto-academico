@@ -1,0 +1,78 @@
+<div class="conteiner p-4">
+    <div class="row">
+        <div class="col-dm-4">
+
+            <form action="/institucion" name="answers" method="POST">
+
+                {{#each Preguntas}}
+                <h4 class="mb-3 text-center" name="{{@key}}" id="{{@key}}">
+                    {{#each this}}
+                    {{@key}}
+                </h4>
+
+                {{#each this}}
+
+                <div class="card mx-auto col-md-10">
+                    <div class="form-group">
+
+                        <div class="card-header">
+                            <h7>{{@key}}.- {{this}}</h7>
+                        </div>
+
+                        <div class="card-body mx-auto">
+
+                            {{#each ../../../materiasCursadas}}
+                            <div>
+                                <h7>• {{this}}</h7>
+                                <div class="form-check form-check-inline position-absolute end-0">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ms-auto" required="required" type="radio"
+                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 1" value="1">
+                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 1">
+                                            Malo
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input mx-auto" required="required" type="radio"
+                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 2" value="2">
+                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 2">
+                                            Neutro
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input me-auto" required="required" type="radio"
+                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 3" value="3">
+                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 3">
+                                            Bueno
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            {{/each}}
+
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                {{/each}}
+                {{/each}}
+                {{/each}}
+
+                <br>
+
+                <div class="container mx-auto text-center">
+                    <button class="btn btn-success btn block">
+                        Enviar Respuestas
+                    </button>
+                    <a class="btn btn-warning" href="/materias">Seleccionar otras materias</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

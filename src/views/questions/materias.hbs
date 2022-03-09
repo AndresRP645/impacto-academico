@@ -1,0 +1,43 @@
+<form action="/preguntas" method="POST">
+<div class="container p-4">
+    <div class="row">
+
+        <h5 class="text-center">Selecciona las materias que estas cursando este semestre</h5>
+
+        {{#each materias}}
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-9 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>{{@key}}° Semestre</h5>
+                        </div>
+                        <div class="card-body">
+                            {{#each this}}
+                            
+                            <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" name="m{{@key}}" value="{{this}}" id="m{{@key}}">
+                            <label class="form-check-label" for="m{{@key}}">
+                                {{this}}
+                            </label>
+                            </div>
+
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        {{/each}}
+        <br>
+
+        <div class="container mx-auto text-center">
+            <button class="btn btn-success btn-block">
+                Seleccionar materias
+            </button>
+            <a class="btn btn-danger" href="/login">Salir</a>
+        </div>
+    </div>
+</div>
+</form>

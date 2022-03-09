@@ -28,7 +28,7 @@ passport.use('login', new LocalStrategy({
             const ban = await match(password, user.password);
             if (ban) {
                 req.session.id = user.id;
-                return done(null, user, req.flash('success', 'Favor de resporder el siguiente cuestionario'));
+                return done(null, user, req.flash('success', 'Favor de seleccionar las materias que estas tomando en el semestre en curso'));
             } else {
                 console.log('error');
                 return done(null, false, req.flash('message', 'Ocurrió un error al ingresar'));
@@ -37,7 +37,7 @@ passport.use('login', new LocalStrategy({
 
         else {
             console.log('error');
-            return done(null, false, req.flash('message', 'El Nombre no coincide con el numero de cuenta registrado'));
+            return done(null, false, req.flash('message', 'El nombre no coincide con el numero de cuenta registrado, Favor de hablar con el encargado si existe algún inconveniente'));
         }
 
     }

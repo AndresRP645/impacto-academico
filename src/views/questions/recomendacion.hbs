@@ -1,0 +1,59 @@
+<form action="/send" name="answers" method="POST">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-dm-4">
+                <h4 class="mb-3 text-center" name="identidadInstitucional" id="identidadInstitucional">
+                    Identidad Institucional
+                </h4>
+
+                {{#each identidadInstitucional}}
+                <div class="card mx-auto col-md-10">
+                    <div class="form-group">
+
+                        <div class="card-header">
+                            <h7>{{@key}}.- {{this}}</h7>
+                        </div>
+
+                        <div class="card-body mx-auto">
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input ms-auto" required="required" type="radio"
+                                    name="p{{@key}}" id="p{{@key}}_1" value="1">
+                                <label class="form-check-label" for="p{{@key}}_1">
+                                    No
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input mx-auto" required="required" type="radio"
+                                    name="p{{@key}}" id="p{{@key}}_2" value="2">
+                                <label class="form-check-label" for="p{{@key}}_2">
+                                    Tal Vez
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input me-auto" required="required" type="radio"
+                                    name="p{{@key}}" id="p{{@key}}_3" value="3">
+                                <label class="form-check-label" for="p{{@key}}_3">
+                                    Si
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                {{/each}}
+
+                <div class="container mx-auto text-center">
+                    <button class="btn btn-success btn block">
+                        Enviar Respuestas
+                    </button>
+                    <a class="btn btn-warning" href="/materias">Seleccionar otras materias</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
