@@ -126,30 +126,51 @@ router.post('/preguntas', isLoggedIn, (req, res) => {
 
             desempeñoDocente: {
                 "Desempeño Docente": {
-                    1: "El método de enseñanza que utiliza el profesor te parece adecuado",
-                    2: "El profesor asistió a todas sus clases durante la semana",
-                    3: "El profesor acepta que los alumnos tengas posturas (pensamientos e ideas) diferentes a las que el plantea",
-                    4: "Los temas que se estudiaron en esta semana se encuentran dentro de los contenidos programados",
-                    5: "El profesor fomenta la participación tanto de hombres como de mujeres",
-                    6: "La clase fue planeada y preparada previo a ser presentada por el profesor",
-                    7: "El profesor presenta suficiente material didáctico en las clases",
-                    8: "El profesor muestra profesionalismo en la clase",
-                    9: "El profesor presenta conocimiento y dominio de la materia"
+                    1: "El profesor evidencia que ha preparado las clases con anticipación",
+                    2: "El profesor demuestra dominio sobre el tema en las explicaciones",
+                    3: "El profesor emplea variedad de ayudas audiovisuales (multimedia, diapositivas, videos, etc.)",
+                    4: "El profesor aplica técnicas y estrategias de evaluación",
+                    5: "El profesor se interesa por los y las estudiantes que demuestran problemas en aprender los temas de estudio",
+                    6: "El profesor demuestra que conoce la clase",
+                    7: "El profesor explica temas con ejemplos de la actualidad",
+                    8: "El profesor utiliza variedad de recursos de enseñanza (demostraciones, lecturas, trabajo en grupo, etc.)",
+                    9: "El o los procedimiento(s) de evaluación permite al alumno reflejar sus conocimientos",
+                    10: "El profesor da respuestas claras a las dudas de los estudiantes",
+                    11: "Los objetivos del curso se definen anticipadamente",
+                    12: "El profesor muestra dominio de los temas tratados",
+                    13: "El profesor crea un ambiente propicio para motivar la participación de los alumnos",
+                    14: "El profesor tiene una forma de enseñar que facilita la comprensión de la materia",
+                    15: "El profesor elabora los exámenes para sintetizar efectivamente la materia del curso",
+                    16: "El profesor trata de acercarse y conversar con los estudiantes antes y después de clase",
+                    17: "El profesor resume y enfatiza los aspectos claves de cada lección",
+                    18: "El profesor integra conocimientos teóricos con los prácticos",
+                    19: "El profesor tiene su forma o técnica de enseñar que facilita la comprensión de la materia",
+                    20: "El profesor es imparcial a la hora de evaluar y calificar (exámenes, tareas, asignaciones, otros)",
+                    21: "El profesor demuestra creatividad en las actividades de la clase",
+                    22: "El profesor demuestra seguridad y confianza en lo que explica",
+                    23: "El profesor realiza actividades prácticas, demostrativas y vivenciales para que los alumnos conozcan donde pueden aplicar los conocimientos",
+                    24: "El profesor genera actividades en grupo que conlleven a objetivos comunes",
+                    25: "El profesor se mantiene activo y dinámico cuando dirige este curso",
+                    26: "El profesor planifica las actividades académicas",
+                    27: "El profesor transmite sus conocimientos con entusiasmo por su asignatura",
+                    28: "El profesor los recursos didácticos son acordes con los temas",
+                    29: "El profesor genera retroalimentación en los exámenes, calificaciones y materiales que le ayudan a comprender el contenido de la clase",
+                    30: "El profesor expresa asertivamente, las propias ideas y escucha las ajenas"
                 }
             },
 
             desempeñoEstudiantil: {
                 "Desempeño Estudiantil": {
-                    10: "Asistí a todas las clases de la semana",
-                    11: "Estoy satisfecho con los aprendizajes obtenidos después de cada clase",
-                    12: "Vivo un ambiente de respeto en el salón de clases",
-                    13: "Asisto puntualmente a las clases",
-                    14: "Atiendo las explicaciones que da el profesor",
-                    15: "El profesor resolvió todas mis dudas",
-                    16: "Considero adecuado que las mujeres estudien ingeniería",
-                    17: "Realizo las tareas y trabajos que se plantean en clase y aquellas/os extraclase",
-                    18: "Las opiniones y soluciones de mis compañeros (hombres) son una aportación importante para la clase",
-                    19: "Las opiniones y soluciones de mis compañeras (mujeres) son una aportación importante para la clase"
+                    31: "Asistí a todas las clases de la semana",
+                    32: "Estoy satisfecho con los aprendizajes obtenidos después de cada clase",
+                    33: "Vivo un ambiente de respeto en el salón de clases",
+                    34: "Asisto puntualmente a las clases",
+                    35: "Atiendo las explicaciones que da el profesor",
+                    36: "El profesor resolvió todas mis dudas",
+                    37: "Considero adecuado que las mujeres estudien ingeniería",
+                    38: "Realizo las tareas y trabajos que se plantean en clase y aquellas/os extraclase",
+                    39: "Las opiniones y soluciones de mis compañeros (hombres) son una aportación importante para la clase",
+                    40: "Las opiniones y soluciones de mis compañeras (mujeres) son una aportación importante para la clase"
                 }
             }
         }
@@ -277,12 +298,7 @@ router.post('/institucion', isLoggedIn, async (req, res) => {
                 "`Pregunta_6`, " +
                 "`Pregunta_7`, " +
                 "`Pregunta_8`, " +
-                "`Pregunta_9`" +
-                ") VALUES ( " + id + ", \"" + materia + "\", ";
-
-            var alumno = "INSERT INTO desempeñoEstudiantil ( " +
-                "`id_alumno`, " +
-                "`id_materia`, " +
+                "`Pregunta_9`, " +
                 "`Pregunta_10`, " +
                 "`Pregunta_11`, " +
                 "`Pregunta_12`, " +
@@ -292,7 +308,33 @@ router.post('/institucion', isLoggedIn, async (req, res) => {
                 "`Pregunta_16`, " +
                 "`Pregunta_17`, " +
                 "`Pregunta_18`, " +
-                "`Pregunta_19`" +
+                "`Pregunta_19`, " +
+                "`Pregunta_20`, " +
+                "`Pregunta_21`, " +
+                "`Pregunta_22`, " +
+                "`Pregunta_23`, " +
+                "`Pregunta_24`, " +
+                "`Pregunta_25`, " +
+                "`Pregunta_26`, " +
+                "`Pregunta_27`, " +
+                "`Pregunta_28`, " +
+                "`Pregunta_29`, " +
+                "`Pregunta_30` " +
+                ") VALUES ( " + id + ", \"" + materia + "\", ";
+
+            var alumno = "INSERT INTO desempeñoEstudiantil ( " +
+                "`id_alumno`, " +
+                "`id_materia`, " +
+                "`Pregunta_31`, " +
+                "`Pregunta_32`, " +
+                "`Pregunta_33`, " +
+                "`Pregunta_34`, " +
+                "`Pregunta_35`, " +
+                "`Pregunta_36`, " +
+                "`Pregunta_37`, " +
+                "`Pregunta_38`, " +
+                "`Pregunta_39`, " +
+                "`Pregunta_40`" +
                 ") VALUES ( " + id + ", \"" + materia + "\", ";
             var aux2 = aux1[materia];
 
@@ -301,16 +343,16 @@ router.post('/institucion', isLoggedIn, async (req, res) => {
                 for (var l in aux3) {
                     const respuesta = aux3[l];
                     const preg = parseInt(l.replace('p', ''));
-                    if (preg < 9) {
+                    if (preg < 30) {
                         docente += respuesta + ", ";
                     }
-                    else if (preg === 9) {
+                    else if (preg === 30) {
                         docente += respuesta;
                     }
-                    else if (preg > 9 && preg < 19) {
+                    else if (preg > 30 && preg < 40) {
                         alumno += respuesta + ", ";
                     }
-                    else if (preg === 19) {
+                    else if (preg === 40) {
                         alumno += respuesta;
                     }
 
@@ -324,33 +366,35 @@ router.post('/institucion', isLoggedIn, async (req, res) => {
     }
 
     if (id === undefined) {
+        
         req.logOut();
         req.flash('message', 'ocurrio un error ingresa de nuevo por favor');
         res.redirect('/login');
+        req.session.destroy();
     }
     else {
         const identidadInstitucional = {
-            20: "Recomendarías a otras personas estudiar Ingeniería en Sistemas Inteligentes en la UAEMex",
-            21: "Te sientes identificado con la carrera y su plan de estudios"
+            41: "Recomendarías a otras personas estudiar Ingeniería en Sistemas Inteligentes en la UAEMex",
+            42: "Te sientes identificado con la carrera y su plan de estudios"
         }
         res.render('questions/recomendacion', { identidadInstitucional });
     }
 });
 
 router.post('/send', isLoggedIn, async (req, res) => {
-    
-    const {p20, p21} =  req.body;
+
+    const { p41, p42 } = req.body;
     const id = req.user.id;
 
-    const sql = "INSERT INTO `identidadInstitucional` (`id_alumno`, `Pregunta_20`, `Pregunta_21`) VALUES (" + id + ", " + p20 + ", " + p21 + ");";
-    
-    await pool.query(sql);
+    const sql = "INSERT INTO `identidadInstitucional` (`id_alumno`, `Pregunta_41`, `Pregunta_42`) VALUES (" + id + ", " + p41 + ", " + p42 + ");";
 
+    await pool.query(sql);
+    
     req.logOut();
     req.flash('success', 'Respuestas enviadas Exitosamente');
     res.redirect('/login');
-    
-    
+    req.session.destroy();
+
 });
 
 
