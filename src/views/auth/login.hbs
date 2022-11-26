@@ -8,11 +8,20 @@
             <div class="card-body">
                 <form action="/login" method="POST">
                     <div class="form-group">
-                        <input type="text" name="No_cuenta" placeholder="Numero de cuenta" class="form-control" autofocus>
+                        <input type="text" name="Cuenta" placeholder="Numero de cuenta" class="form-control" autofocus>
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="text" name="Nombre_Completo" placeholder="Nombre Completo" class="form-control">
+                        <input type="text" name="Nombre" placeholder="Nombre Completo" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <select class="form-control" name="id_Carrera">
+                            <option selected>Selecciona tu carrera</option>
+                            {{#each Carrera}}
+                                <option value="{{@key}}">{{this}}</option>
+                            {{/each}}
+                        </select>
                     </div>
                     <br>
                     <div class="form-group">

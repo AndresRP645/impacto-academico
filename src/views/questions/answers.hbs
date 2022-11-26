@@ -5,13 +5,12 @@
             <form action="/institucion" name="answers" method="POST">
 
                 {{#each Preguntas}}
+
                 <h4 class="mb-3 text-center" name="{{@key}}" id="{{@key}}">
-                    {{#each this}}
                     {{@key}}
                 </h4>
-
+                
                 {{#each this}}
-
                 <div class="card mx-auto col-md-10">
                     <div class="form-group">
 
@@ -21,31 +20,31 @@
 
                         <div class="card-body mx-auto">
 
-                            {{#each ../../../materiasCursadas}}
+                            {{#each ../../materiasCursadas}}
                             <div>
                                 <h7>• {{this}}</h7>
                                 <br>
                                 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input ms-auto" required="required" type="radio"
-                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 1" value="1">
-                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 1">
+                                            name="{{@../key}} {{@key}}" id="{{@../key}} {{@key}} 1" value="1">
+                                        <label class="form-check-label" for="{{@../key}} {{@key}} 1">
                                             Malo
                                         </label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input mx-auto" required="required" type="radio"
-                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 2" value="2">
-                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 2">
+                                            name="{{@../key}} {{@key}}" id="{{@../key}} {{@key}} 2" value="2">
+                                        <label class="form-check-label" for="{{@../key}} {{@key}} 2">
                                             Neutro
                                         </label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input me-auto" required="required" type="radio"
-                                            name="p{{@../key}} {{@key}}" id="p{{@../key}} {{@key}} 3" value="3">
-                                        <label class="form-check-label" for="p{{@../key}} {{@key}} 3">
+                                            name="{{@../key}} {{@key}}" id="{{@../key}} {{@key}} 3" value="3">
+                                        <label class="form-check-label" for="{{@../key}} {{@key}} 3">
                                             Bueno
                                         </label>
                                     </div>
@@ -59,7 +58,6 @@
                     </div>
                 </div>
                 <br>
-                {{/each}}
                 {{/each}}
                 {{/each}}
 

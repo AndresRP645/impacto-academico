@@ -22,8 +22,7 @@ var hbs = exphbs.create({
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
-    extname: '.hbs',
-    helpers: require('./lib/handlebars')
+    extname: '.hbs'
 });
 
 app.engine('.hbs', hbs.engine);
@@ -59,6 +58,8 @@ app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
 app.use(require('./routes/answers'));
 app.use(require('./routes/materias'));
+app.use(require('./routes/preguntas'));
+app.use(require('./routes/institucion'));
 
 //Public
 app.use(express.static(path.join(__dirname, 'public')));
