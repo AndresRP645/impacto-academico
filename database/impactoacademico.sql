@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `impactoacademico` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `impactoacademico`;
 USE `impactoacademico`;
 
 DROP TABLE IF EXISTS `Alumnos`;
@@ -6,18 +6,18 @@ CREATE TABLE IF NOT EXISTS `Alumnos` (
   `id` int NOT NULL,
   `Cuenta` int NOT NULL,
   `Nombre` varchar(50) NOT NULL,
-  `password` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(200) NOT NULL,
   `id_Carrera` varchar(3) NOT NULL,
   PRIMARY KEY (`Cuenta`),
   KEY `id_Carrera` (`id_Carrera`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 DROP TABLE IF EXISTS `Carrera`;
 CREATE TABLE IF NOT EXISTS `Carrera` (
   `id_Carrera` varchar(3) NOT NULL,
   `nm_Carrera` varchar(50) NOT NULL,
   PRIMARY KEY (`id_Carrera`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 INSERT INTO `Carrera` VALUES
 ('ISI', 'Ingeniería en Sistemas Inteligentes'),
@@ -31,10 +31,10 @@ CREATE TABLE IF NOT EXISTS `Materias` (
   `id_Materia` int NOT NULL,
   `id_Carrera` varchar(3) NOT NULL,
   `Semestre` int NOT NULL,
-  `Nombre` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Nombre` varchar(200)NOT NULL,
   PRIMARY KEY (`id_Materia`),
   KEY `id_Carrera` (`id_Carrera`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 INSERT INTO `Materias` VALUES
 (10, 'ISI', 1, 'Psicologia'),
@@ -397,10 +397,10 @@ DROP TABLE IF EXISTS `Preguntas`;
 CREATE TABLE IF NOT EXISTS `Preguntas` (
   `id_Pregunta` int NOT NULL,
   `id_Type` int NOT NULL,
-  `Pregunta` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Pregunta` varchar(200) NOT NULL,
   PRIMARY KEY (`id_Pregunta`),
   KEY `id_Type` (`id_Type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 INSERT INTO `Preguntas` VALUES
 (1, 1, 'El profesor evidencia que ha preparado las clases con anticipación'),
@@ -451,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `Pregunta_type` (
   `id_Type` int NOT NULL,
   `nm_Type` varchar(50) NOT NULL,
   PRIMARY KEY (`id_Type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 INSERT INTO `Pregunta_type` VALUES
 (1, 'Desempeño Docente'),
@@ -496,7 +496,7 @@ CREATE TABLE IF NOT EXISTS `RespDsmpDcnte` (
   PRIMARY KEY (`id_RespDcnte`),
   KEY `id_Alumno` (`id_Alumno`),
   KEY `id_Materia` (`id_Materia`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 DROP TABLE IF EXISTS `RespDsmpEstdtl`;
 CREATE TABLE IF NOT EXISTS `RespDsmpEstdtl` (
@@ -516,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `RespDsmpEstdtl` (
   PRIMARY KEY (`id_RespDsmpEstdtl`),
   KEY `id_Alumno` (`id_Alumno`),
   KEY `id_Materia` (`id_Materia`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 DROP TABLE IF EXISTS `RespIdntInst`;
 CREATE TABLE IF NOT EXISTS `RespIdntInst` (
@@ -526,7 +526,7 @@ CREATE TABLE IF NOT EXISTS `RespIdntInst` (
   `respuesta_2` int NOT NULL,
   PRIMARY KEY (`id_RespIndtInst`),
   KEY `id_Alumno` (`id_Alumno`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE IF NOT EXISTS `sessions` (
@@ -534,7 +534,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `expires` int UNSIGNED NOT NULL,
   `data` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
   PRIMARY KEY (`session_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 INSERT INTO `sessions` VALUES
 ('FOTKXaiC4x6uDf-lL_Jj49t9PcIVawWV', 1669531258, '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{}}'),
