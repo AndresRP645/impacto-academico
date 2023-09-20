@@ -4,6 +4,8 @@ module.exports = {
         user: process.env.DB_USER || "root",
         password: process.env.DB_PASSWORD || "",
         database: process.env.DB_NAME || "impactoacademico",
-        
+        ssl:{
+            rejectUnauthorized: true
+        }
     }
 }
