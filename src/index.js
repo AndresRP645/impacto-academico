@@ -8,6 +8,7 @@ const MySQLStore = require('express-mysql-session');
 const { database } = require('./keys');
 const passport = require('passport');
 const favicon = require('serve-favicon');
+
 //initializations
 const app = express();
 require('./lib/passport');

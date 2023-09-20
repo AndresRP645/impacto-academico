@@ -1,9 +1,9 @@
 module.exports = {
     database: {
-        host: process.env.HOST || "localhost",
-        user: process.env.DB_USER || "root",
-        password: process.env.DB_PASSWORD || "",
-        database: process.env.DB_NAME || "impactoacademico",
+        host: 'us-east.connect.psdb.cloud',
+        user: 'hf6kmxi3p6g0qzhvkwu5',
+        password: 'pscale_pw_KKcAGI0hlusoaa3phV0SfsKhm0N2fvb5ZtvP38rsTNp',
+        database: 'impactoacademico',
         ssl:{
             rejectUnauthorized: true
         }
