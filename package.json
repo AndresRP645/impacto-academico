@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "netlify build"
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,8 @@
     "express-validator": "^6.14.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "netlify-cli": "^16.4.2",
+    "netlify-lambda": "^2.0.16",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "serve-favicon": "^2.5.0",
