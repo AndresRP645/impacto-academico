@@ -1,8 +1,8 @@
 module.exports = {
     database: {
         host: "us-east.connect.psdb.cloud",
-        user: "1w6r1yg47oyuhz61iib8",
-        password: "pscale_pw_yYdE6Jntiloyu45vWU1SXMKrPqbqqQwfUT5NRo5P16P",
+        user: "z7hh01bl5c4xzs0li7qx",
+        password: "pscale_pw_BKMWlgrCeOPrAKEUo9VQ5PXPnfftlkUKvkMNrkdwoYd",
         database: "impactoacademico",
         ssl:{
             rejectUnauthorized: true
