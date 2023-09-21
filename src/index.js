@@ -60,7 +60,6 @@ app.use(require('./routes/authentication'));
 app.use(require('./routes/answers'));
 app.use(require('./routes/materias'));
 app.use(require('./routes/preguntas'));
-app.use(require('./routes/institucion'));
 
 //Public
 app.use(express.static(path.join(__dirname, 'public')));
@@ -70,4 +69,5 @@ app.use(express.static(path.join(__dirname, 'public')));
     console.log('Server on port ', app.get('port'));
 }
 );*/
+
 module.exports.handler = serverless(app);
