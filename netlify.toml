@@ -1,6 +1,6 @@
 [build]
   functions = "src"
-  publish = "index"
+  publish = "src"
 
 [[redirects]]
 to=".netlify/functions/index/:splat"
