@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "netlify deploy --prod"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,13 +14,17 @@
     "connect-flash": "^0.1.1",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
+    "express-list-endpoints": "^6.0.0",
     "express-mysql-session": "^2.1.7",
     "express-session": "^1.17.2",
     "express-validator": "^6.14.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "netlify-cli": "^16.4.2",
+    "netlify-lambda": "^2.0.16",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "serverless-http": "^3.2.0"
   }
 }
