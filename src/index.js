@@ -8,6 +8,7 @@ const MySQLStore = require('express-mysql-session');
 const { database } = require('./keys');
 const passport = require('passport');
 const favicon = require('serve-favicon');
+const serverless = require('serverless-http');
 
 //initializations
 const app = express();
@@ -65,7 +66,8 @@ app.use(require('./routes/institucion'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Starting the server
-app.listen(app.get('port'), () => {
+/*app.listen(app.get('port'), () => {
     console.log('Server on port ', app.get('port'));
 }
-);
+);*/
+module.exports.handler = serverless(app);
