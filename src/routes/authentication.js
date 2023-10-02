@@ -11,7 +11,6 @@ router.get('/login', isNotLoggedIn, async (req, res) => {
     rows.forEach(reg => {
         Carrera[reg.id_Carrera] = [reg.nm_Carrera];
     });
-
     res.render('auth/login', {Carrera});
 });
 

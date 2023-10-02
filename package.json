@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "netlify build"
+    "build": "netlify dev"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,6 @@
     "mysql": "^2.18.1",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.5.0",
-    "serverless-http": "^3.2.0"
+    "serve-favicon": "^2.5.0"
   }
 }
